@@ -23,7 +23,7 @@ public class PhoneDemo {
         System.out.println(p.brand); // "iPhone"
         System.out.println(p.price); // 12999
 
-        p.call();
-        p.sendMessage();
+        p.call(); // call
+        p.sendMessage(); // send message
     }
 }
