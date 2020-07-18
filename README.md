@@ -1,10 +1,11 @@
 # Basics Of Java
 
-+ HelloWorld（day00）
-+ 基础语法（day01）
-+ 常用 API（day02）
-+ 封装（day03）
-+ 继承（day04）
++ day00: HelloWorld
++ day01: 基础语法
++ day02: 数组
++ day03: 方法
++ day04: 面向对象 - 封装（成员变量、成员变量、成员方法、private关键字、无参有参构造方法）
++ day05: 常用 API（String、StringBuilder）
 + 多态（day05）
 + 集合（day06）
 + 异常（day07）
