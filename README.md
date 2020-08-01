@@ -6,6 +6,7 @@
 + day03: 方法
 + day04: 面向对象 - 封装（成员变量、成员变量、成员方法、private关键字、无参有参构造方法）
 + day05: 常用 API（String、StringBuilder）
++ day06: 集合基础（ArrayList）
 + 多态（day05）
 + 集合（day06）
 + 异常（day07）
