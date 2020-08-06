@@ -8,6 +8,7 @@
 + day05: 常用 API（String、StringBuilder）
 + day06: 集合基础（ArrayList）
 + day07: 学生管理系统（ArrayList 练习）
++ day08: 信息管理系统（学生、教室）（分包、分类练习）
 + 多态（day05）
 + 集合（day06）
 + 异常（day07）
