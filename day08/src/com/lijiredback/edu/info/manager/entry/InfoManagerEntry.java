@@ -2,7 +2,6 @@ package com.lijiredback.edu.info.manager.entry;
 
 
 import com.lijiredback.edu.info.manager.controller.StudentController;
-import jdk.swing.interop.SwingInterOpUtils;
 
 import java.util.Scanner;
 

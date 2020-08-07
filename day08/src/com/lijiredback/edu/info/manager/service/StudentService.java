@@ -36,4 +36,26 @@ public class StudentService {
 
         return exists;
     }
+
+    public Student[] findAllStudents() {
+        Student[] allStudent = studentDao.findAllStudent();
+
+        boolean flag = false;
+        for (int i = 0; i < allStudent.length; i++) {
+            Student stu = allStudent[i];
+            if (stu != null) {
+                flag = true;
+                break;
+            }
+        }
+        if (flag) {
+            return allStudent;
+        } else {
+            return null;
+        }
+    }
+
+    public void deleteStudentById(String delId) {
+        studentDao.deleteStudentById(delId);
+    }
 }

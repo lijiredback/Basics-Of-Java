@@ -5,7 +5,7 @@ import com.lijiredback.edu.info.manager.domain.Student;
 // 数据的增删改查
 public class StudentDao {
     // 1. 创建学生对象数组
-    private Student[] stus = new Student[5];
+    private static Student[] stus = new Student[5];
 
     public boolean addStudent(Student stu) {
         // 2. 添加学生到数组
@@ -33,7 +33,12 @@ public class StudentDao {
 
     }
 
+    // 查看
     public Student[] findAllStudent() {
         return stus;
+    }
+
+    // 删除学生
+    public void deleteStudentById(String delId) {
     }
 }
