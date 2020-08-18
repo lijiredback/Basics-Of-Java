@@ -29,7 +29,8 @@ public class StudentController {
                     deleteStudent();
                     break;
                 case "3":
-                    System.out.println("修改学生");
+                    // System.out.println("修改学生");
+                    updateStudent();
                     break;
                 case "4":
                     // System.out.println("查看学生");
@@ -45,24 +46,31 @@ public class StudentController {
         }
     }
 
+    // 修改学生
+    public void updateStudent() {
+        String updateId = inputStudentId();
+
+        System.out.println("请输入学生姓名：");
+        String name = sc.next();
+        System.out.println("请输入学生年龄：");
+        String age = sc.next();
+        System.out.println("请输入学生生日：");
+        String birthday = sc.next();
+
+        Student newStu = new Student();
+        newStu.setId(updateId);
+        newStu.setName(name);
+        newStu.setAge(age);
+        newStu.setBirthday(birthday);
+
+        studentService.updateStudent(updateId, newStu);
+
+        System.out.println("修改成功！");
+    }
+
     // 删除学生
     public void deleteStudent() {
-        String delId;
-
-        while(true) {
-            // 1. 键盘录入学生 id
-            System.out.println("请输入要删除的学生 id");
-            delId = sc.next();
-
-            // 2. 判断 id 是否存在
-            boolean exists = studentService.isExists(delId);
-
-            if (!exists) {
-                System.out.println("您输入的 id 不存在，请重新输入：");
-            } else {
-                break;
-            }
-        }
+        String delId = inputStudentId();
 
         // 3. 调用 service 中的 deleteStudentById，删除
         studentService.deleteStudentById(delId);
@@ -129,5 +137,27 @@ public class StudentController {
         } else {
             System.out.println("添加失败");
         }
+    }
+
+    // 键盘录入学生 id
+    public String inputStudentId() {
+        String id;
+
+        while(true) {
+            // 1. 键盘录入学生 id
+            System.out.println("请输入学生 id");
+            id = sc.next();
+
+            // 2. 判断 id 是否存在
+            boolean exists = studentService.isExists(id);
+
+            if (!exists) {
+                System.out.println("您输入的 id 不存在，请重新输入：");
+            } else {
+                break;
+            }
+        }
+
+        return id;
     }
 }
