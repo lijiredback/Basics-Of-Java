@@ -16,4 +16,8 @@ package com.lijiredback.override;
             可以重写父类中的方法，这样，既沿袭了父类的功能，又定义了子类特有的内容
  */
 public class OverrideTest {
+    public static void main(String[] args) {
+        iPearV2 i = new iPearV2();
+        i.smallBlack();
+    }
 }
